@@ -15,7 +15,7 @@ https://login.ingest.info/authorize?response_type=code&client_id=uCA3YHTPDxoKB7Y
 They will then log in, authorizing you to access their account. After a successful login, Ingest will redirect them to the URI you set in your Developer Centre settings, with a query string appended. It will look something like:
 
 ```
-https://yourwebsite.com/your-ingest-subfolder?code=c3HWRTA-QimPeHtcQD7IeQ&state=1a82a6bb-fa72-4218-a3e4-3861b2fbc2ce
+https://yourwebsite.com/your-ingest-subfolder?code=c3HWRTA-QimPeHtcQD7IeQ
 ```
 
 You should then grab that code off of the query string, and send a POST to Ingest requesting to exchange this code (which can only be used once) for a standard access token in JWT format. So the index.php file inside your-ingest-subfolder could look something like:
